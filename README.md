@@ -7,6 +7,10 @@ This repository contains the source code, config files and a walkthrough of my p
 The goal of my project is to [...] using a big data tool like Spark. 
 
 ## Methodology
+- What cleaning I did
+- What assumptions I made?
+
+## Exploratory Data Analysis
 
 ## Conclusions
 
