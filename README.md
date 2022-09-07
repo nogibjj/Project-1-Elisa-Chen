@@ -6,6 +6,9 @@ This repository contains the source code, config files and a walkthrough of my p
 ##Key Objectives
 The goal of my project is to [...] using a big data tool like Spark. 
 
+## Demo Video
+Link or Embed a demo video
+
 ## Methodology
 - What cleaning I did
 - What assumptions I made?
