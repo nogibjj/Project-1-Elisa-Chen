@@ -4,4 +4,9 @@ pandas
 seaborn
 pylint
 spark
+pyspark
 kaggle
+openai
+click
+dask[complete]
+dask[diagnostics]
