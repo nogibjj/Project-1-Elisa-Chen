@@ -16,6 +16,7 @@ from dask.distributed import Client
 
 #Loading the data
 def load_data():
+    """Load the data from the csv file using kaggle api"""
     #Setting up the client
     client = Client()
     pd_df = pd.read_csv("./raw_data/cleanposts.csv", nrows=100000) #REMEMBER TO CHANGE NROWS
@@ -24,22 +25,25 @@ def load_data():
 
 #A Function To Find All Messages With Question Marks
 def find_question_mark(df):
+    """Find all messages with question marks"""
     df['question_mark'] = df['cleanmessage'].str.contains('\?')
     df = df[df['question_mark'] == True]
     return df
 
 #A Function to extract the question from the message
 def extract_question(df):
+    """Extract the question from the message"""
     df['question'] = df['cleanmessage'].str.extract(r'\b([A-Z][^.!]*[?])')[0]
     return df
 
 #Function to generate the answer to any question using OpenAI GPT-3 API
 def ask(question):
-  openai.api_key = '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'
+    """Generate an answer to any question using OpenAI GPT-3 API"""
+    openai.api_key = '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'
 
-  start_sequence = "\nAI:"
+    start_sequence = "\nAI:"
 
-  response = openai.Completion.create(
+    response = openai.Completion.create(
       engine="text-davinci-002",
       prompt=question + start_sequence,
       temperature=0.9,
@@ -49,10 +53,11 @@ def ask(question):
       presence_penalty=0.6,
       stop=["\n", " Human:", " AI:"]
     )
-  return response["choices"][0]["text"].strip(" \n")
+    return response["choices"][0]["text"].strip(" \n")
 
 #Function to randomly pick a question from the dataset and provide a response via OpenAI GPT-3 API
 def answer(ddf):
+    """Randomly pick a question from the dataset and provide a response via OpenAI GPT-3 API"""
     index = random.randint(1, len(ddf))
     question = ddf['question'].compute().tolist()[index]
     print("Question: " + question)
