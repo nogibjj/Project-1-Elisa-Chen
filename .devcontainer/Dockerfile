@@ -19,5 +19,7 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends vim
 
+COPY library-scripts/git-lfs-debian.sh /tmp/library-scripts/
+RUN apt-get update && bash /tmp/library-scripts/git-lfs-debian.sh
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
