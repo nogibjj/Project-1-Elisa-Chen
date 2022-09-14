@@ -7,13 +7,11 @@ import openai
 
 # Using dask to load and manipulate the data
 from dask import dataframe as dd
-from dask.distributed import Client
 
 # Loading the data
 def load_data():
     """Load the data from the csv file"""
     # Setting up the client
-    client = Client()
     pd_df = pd.read_csv(
         "./raw_data/cleanposts.csv", nrows=100000
     )  # REMEMBER TO CHANGE NROWS
