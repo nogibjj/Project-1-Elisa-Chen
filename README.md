@@ -3,6 +3,8 @@
 # Project-1: Answering Burning Questions From The White Power Forum Posts (2001 - 2020) Using a Chat Bot
 This repository contains the source code, config files and a short video walkthrough of my project. Please see below for more details.
 
+![Project 1 - Flowchart - Page 1](https://user-images.githubusercontent.com/25168588/190188245-e4652052-7c01-4271-9af5-046cc9a83aed.png)
+
 ## Key Objectives & Project Description
 The goal of my project is to answer questions from the White Power Forum <<<LINK>>>> website using a Chat Bot. The data for all posts shared on White Power Forum between 2001 - 2020 can be found here <<<LINK>>>. The bot was built using OpenAI's "chat" API <<<LINK>>>. By default, the program will randomly select a question asked in the White Power Forum and generate an answer using the chat bot. Alternatively, the user can also input their own custom question to be answered by the bot. The questions and answers will be displayed on a web app, after the user runs the command `python qabot-app.py`. Most questions are still quite foreign / unseen by the bot, so don't be surprised if the bot doesn't have an answer to the question.
 
