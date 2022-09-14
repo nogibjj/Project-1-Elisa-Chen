@@ -12,9 +12,9 @@ test:
 #	python -m pytest -n auto --dist loadgroup -vv --cov=mylib testing/ 
 
 format:
-	black *.py
+	black *.py mainlib/*.py
 
 lint:
-	pylint --disable=R,C tests.py
+	pylint --disable=R,C mainlib
 
 all: install lint test

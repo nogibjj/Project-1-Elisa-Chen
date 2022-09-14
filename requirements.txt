@@ -1,12 +1,11 @@
 black
 numpy
 pandas
-seaborn
 pylint
-spark
-pyspark
+fastapi
 kaggle
 openai
 click
 dask[complete]
 dask[diagnostics]
+uvicorn[standard]

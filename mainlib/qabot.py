@@ -3,8 +3,6 @@ import os
 import random
 import pandas as pd
 import openai
-import click
-#import warnings
 
 
 # Using dask to load and manipulate the data
@@ -13,7 +11,7 @@ from dask.distributed import Client
 
 # Loading the data
 def load_data():
-    """Load the data from the csv file using kaggle api"""
+    """Load the data from the csv file"""
     # Setting up the client
     client = Client()
     pd_df = pd.read_csv(
@@ -64,7 +62,10 @@ def answer(question):
     """Randomly pick a question from the dataset and provide a response via OpenAI GPT-3 API"""
     #warnings.filterwarnings("ignore")
     print("Question: " + question)
-    print("Answer: " + ask(question))
+    answer_question = ask(question)
+    print("Answer: " + answer_question)
+    return answer_question
+
 
 
 # Function to run the bot and respond to a question. By default it will respond to a random question.
@@ -77,4 +78,7 @@ def return_answer(question=""):
         ddf = ddf.dropna(subset=["question"])
         index = random.randint(1, len(ddf))
         question = ddf["question"].compute().tolist()[index]
-    answer(question)
+    bot_answer = answer(question)
+    if bot_answer == '':
+        bot_answer = "I don't know. Please ask me another question."
+    return question, bot_answer
