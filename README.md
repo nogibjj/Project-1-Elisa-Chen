@@ -9,7 +9,7 @@ This repository contains the source code, config files and a short video walkthr
 The goal of my project is to answer questions from AskReddit Forum website using a Chat Bot. The data for all posts shared on AskReddit Forum can be found [here](https://www.kaggle.com/datasets/rodmcn/askreddit-questions-and-answers?select=reddit_questions.csv). The bot was built using OpenAI's "chat" [API](https://beta.openai.com/examples/default-chat). By default, the program will randomly select a question asked in AskReddit Forum and generate an answer using the chat bot. Alternatively, the user can also input their own custom question to be answered by the bot. The questions and answers will be displayed on a web app, after the user runs the command `python qabot-app.py`. Most questions are still quite foreign / unseen by the bot, so don't be surprised if the bot doesn't have an answer to the question.
 
 ## Demo Video
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/0c2ef6edf2e64009a15410e36fab8622" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[<img src="Project 1 - Elisa Chen - AskReddit Chat Bot - Watch Video" width="50%">](https://www.loom.com/embed/0c2ef6edf2e64009a15410e36fab8622 "Demo Walkthrough")
 
 ## Methodology
 1. The data was downloaded to my GitHub codespaces using the Kaggle API. 
