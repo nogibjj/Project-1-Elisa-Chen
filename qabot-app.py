@@ -8,7 +8,7 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return HTMLResponse("""<h1>Welcome to the Q&A bot!</h1><br> 
-    Please use the <code>/question</code> endpoint to randomly pull a question from the White Forum Post.
+    Please use the <code>/question</code> endpoint to randomly pull a question from the AskReddit forum on Reddit.
     <br>Alternatively, you can also ask your own question by using the <code>/question/{your question}</code> 
     endpoint and inputting your question in the <code>your question</code> parameter.""")
 
