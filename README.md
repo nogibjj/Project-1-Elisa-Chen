@@ -1,12 +1,12 @@
 [![Python application test with Github Actions using devcontainers](https://github.com/nogibjj/Project-1-Elisa-Chen/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/Project-1-Elisa-Chen/actions/workflows/main.yml)
 
-# Project-1: Answering Burning Questions From AskReddit Thread Posts on Reddit Using a Chat Bot
+# Project-1: Answering Burning Questions From AskReddit Thread Posts on Reddit (2011 - 2020) Using a Chat Bot
 This repository contains the source code, config files and a short video walkthrough of my project. Please see below for more details.
 
 ![Project 1 - Flowchart - Page 1](https://user-images.githubusercontent.com/25168588/190188245-e4652052-7c01-4271-9af5-046cc9a83aed.png)
 
 ## Key Objectives & Project Description
-The goal of my project is to answer questions from AskReddit Forum <<<LINK>>>> website using a Chat Bot. The data for all posts shared on AskReddit Forum can be found [here](https://www.kaggle.com/datasets/rodmcn/askreddit-questions-and-answers?select=reddit_questions.csv). The bot was built using OpenAI's "chat" [API](https://beta.openai.com/examples/default-chat). By default, the program will randomly select a question asked in AskReddit Forum and generate an answer using the chat bot. Alternatively, the user can also input their own custom question to be answered by the bot. The questions and answers will be displayed on a web app, after the user runs the command `python qabot-app.py`. Most questions are still quite foreign / unseen by the bot, so don't be surprised if the bot doesn't have an answer to the question.
+The goal of my project is to answer questions from AskReddit Forum website using a Chat Bot. The data for all posts shared on AskReddit Forum can be found [here](https://www.kaggle.com/datasets/rodmcn/askreddit-questions-and-answers?select=reddit_questions.csv). The bot was built using OpenAI's "chat" [API](https://beta.openai.com/examples/default-chat). By default, the program will randomly select a question asked in AskReddit Forum and generate an answer using the chat bot. Alternatively, the user can also input their own custom question to be answered by the bot. The questions and answers will be displayed on a web app, after the user runs the command `python qabot-app.py`. Most questions are still quite foreign / unseen by the bot, so don't be surprised if the bot doesn't have an answer to the question.
 
 ## Demo Video
 Link or Embed a demo video
@@ -21,7 +21,14 @@ Link or Embed a demo video
 
 ## Relevant Files & User Instructions
 ### Data Files
-Data Files are located in the `raw_data` directory.
+Data Files are located in the `raw_data` directory. Below is a preview of the data content:
+
+ID | text | votes | timestamp | datetime 
+--- | --- | --- | --- |--- 
+izdtr | What's the purpose of life? | 28 | 1601075611.0 | Fri Sep 25 23:13:31 2020 UTC
+
+`ID` is the unique id identifying the question. We primarily use `text` field to extract the questions from. `Votes` is the number of upvotes received by the post. `timestamp` is the unix timestamp at time of posting. `datetime` is the human readable timestamp.
+
 
 ### Helper Functions
 All the functions needed to preprocess and run the program are in the `mainlib/qabot.py` file. 
