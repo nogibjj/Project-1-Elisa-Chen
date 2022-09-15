@@ -1,28 +1,30 @@
 # Importing necessary libraries
 import os
 import random
-import pandas as pd
 import openai
-
 
 # Using dask to load and manipulate the data
 from dask import dataframe as dd
+from dask.distributed import Client
 
 # Loading the data
 def load_data():
     """Load the data from the csv file"""
     # Setting up the client
-    pd_df = pd.read_csv(
-        "./raw_data/cleanposts.csv", nrows=100000
-    )  # REMEMBER TO CHANGE NROWS
-    ddf = dd.from_pandas(pd_df, npartitions=10)
+    client = Client()
+    client.restart()
+
+    # Loading the data
+    ddf = dd.read_csv("./raw_data/reddit_questions.csv", on_bad_lines='skip', blocksize = 25e6, delimiter = ';') 
+    ddf = client.persist(ddf)
+
     return ddf
 
 
 # A Function To Find All Messages With Question Marks
 def find_question_mark(df):
     """Find all messages with question marks"""
-    df["question_mark"] = df["cleanmessage"].str.contains(r"\?")
+    df["question_mark"] = df["text"].str.contains(r"\?")
     df = df[df["question_mark"] == True]
     return df
 
@@ -31,7 +33,7 @@ def find_question_mark(df):
 def extract_question(df):
     """Extract the question from the message"""
     df = df.copy()
-    df["question"] = df['cleanmessage'].str.extract(r"\b([A-Z][^.!]*[?])")[0]
+    df["question"] = df['text'].str.extract(r"\b([A-Z][^.!]*[?])")[0]
     return df
 
 

@@ -8,4 +8,6 @@ openai
 click
 dask[complete]
 dask[diagnostics]
+dask[distributed]
+jupyter
 uvicorn[standard]

@@ -11,9 +11,9 @@ def cli():
     
 #build a click command
 @cli.command()
-@click.option("--question", default = '' ,prompt="Ask a question. If you input nothing, the bot will randomly select a question asked in White Power Forum... so please do ask a question.", help="The question you want to ask")
+@click.option("--question", default = '' ,prompt="Ask a question. If you input nothing, the bot will randomly select a question asked in Reddit", help="The question you want to ask")
 def answer(question):
-    """Ask a question and receive an answer. By default it will select a random question from the White Power Forum posts."""
+    """Ask a question and receive an answer. By default it will select a random question from the Reddit posts."""
     return_answer(question)
 
 #run the command line interface
