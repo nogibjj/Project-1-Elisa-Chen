@@ -70,7 +70,7 @@ def answer(question):
 
 # Function to run the bot and respond to a question. By default it will respond to a random question.
 def return_answer(question=""):
-    """Randomly select a question from the White Power Forum posts and provide an answer using OpenAI GPT-3 API"""
+    """Randomly select a question from the AskReddit posts and provide an answer using OpenAI GPT-3 API"""
     if question == "":
         ddf = load_data()
         ddf = ddf.map_partitions(find_question_mark)
