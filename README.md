@@ -21,7 +21,11 @@ Link or Embed a demo video
 
 ## Relevant Files & User Instructions
 ### Data Files
-Data Files are located in the `raw_data` directory.
+Data Files are located in the `raw_data` directory. Below is a preview of the data content:
+
+Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
 
 ### Helper Functions
 All the functions needed to preprocess and run the program are in the `mainlib/qabot.py` file. 
