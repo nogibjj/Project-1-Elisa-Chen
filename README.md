@@ -23,9 +23,10 @@ Link or Embed a demo video
 ### Data Files
 Data Files are located in the `raw_data` directory. Below is a preview of the data content:
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+ID | text | votes | timestamp | datetime 
+--- | --- | --- | --- |--- 
+izdtr | What's the purpose of life? | 1601075611.0 | Fri Sep 25 23:13:31 2020 UTC
+
 
 ### Helper Functions
 All the functions needed to preprocess and run the program are in the `mainlib/qabot.py` file. 
