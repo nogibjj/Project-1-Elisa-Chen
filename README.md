@@ -1,6 +1,6 @@
 [![Python application test with Github Actions using devcontainers](https://github.com/nogibjj/Project-1-Elisa-Chen/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/Project-1-Elisa-Chen/actions/workflows/main.yml)
 
-# Project-1: Answering Burning Questions From AskReddit Thread Posts on Reddit Using a Chat Bot
+# Project-1: Answering Burning Questions From AskReddit Thread Posts on Reddit (2011 - 2020) Using a Chat Bot
 This repository contains the source code, config files and a short video walkthrough of my project. Please see below for more details.
 
 ![Project 1 - Flowchart - Page 1](https://user-images.githubusercontent.com/25168588/190188245-e4652052-7c01-4271-9af5-046cc9a83aed.png)
@@ -26,6 +26,8 @@ Data Files are located in the `raw_data` directory. Below is a preview of the da
 ID | text | votes | timestamp | datetime 
 --- | --- | --- | --- |--- 
 izdtr | What's the purpose of life? | 28 | 1601075611.0 | Fri Sep 25 23:13:31 2020 UTC
+
+`ID` is the unique id identifying the question. We primarily use `text` field to extract the questions from. `Votes` is the number of upvotes received by the post. `timestamp` is the unix timestamp at time of posting. `datetime` is the human readable timestamp.
 
 
 ### Helper Functions
