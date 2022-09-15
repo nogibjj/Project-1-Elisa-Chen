@@ -25,7 +25,7 @@ Data Files are located in the `raw_data` directory. Below is a preview of the da
 
 ID | text | votes | timestamp | datetime 
 --- | --- | --- | --- |--- 
-izdtr | What's the purpose of life? | 1601075611.0 | Fri Sep 25 23:13:31 2020 UTC
+izdtr | What's the purpose of life? | 28 | 1601075611.0 | Fri Sep 25 23:13:31 2020 UTC
 
 
 ### Helper Functions
